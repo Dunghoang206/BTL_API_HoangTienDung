@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(200px, 15.85%) 1fr;
+    font-family:"Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    color: #20242a;
+}
+
+/* Thanh bên trái */
+.thanh-ben {
+    padding : 42px;
+    background-color: #469be0;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    width: 144px;
+    height: 144px;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 50%;
+    background: white;
+    object-fit: contain;
+}
+
+.thanh-ben p {
+    margin: 42px 0 0;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+/* Tiêu đề */
+main {
+    min-width: 0;
+    padding: 0 32px 48px 16px;
+}
+
+.tieu-de-truong {
+    padding: 10px 0 24px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    color: #589fff;
+}
+
+.tieu-de-truong h1 ,
+.tieu-de-truong p {
+    margin: 0;
+    font-size: clamp(22px, 2vw, 26px);
+    font-weight: 790;
+    line-height: 1.45;
+}
+
+/* Nội dung hướng dẫn và form đăng nhập */
+.noi-dung {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 0.6fr);
+    align-items: start;
+    gap: 30px;
+    max-width: 1168px;
+    margin-top: clamp(48px, 15vh, 110px);
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: clamp(30px, 1.7vw, 32px);
+    line-height: 1.2;
+}
+
+.huong-dan-su-dung ol,
+.huong-dan-su-dung ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.huong-dan-su-dung li,
+.huong-dan-su-dung > p {
+    margin-top: 18px;
+    list-style: none;
+    font-size: 17px;
+}
+
+.huong-dan-su-dung ul li::before {
+    content: "- ";
+}
+
+a {
+    color: #187ad6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form đăng nhập */
+.khung-dang-nhap {
+    padding: 42px clamp(24px, 2.3vw, 44px) 66px;
+    border: 1px solid #b7c1ce;
+}
+
+.khung-dang-nhap h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+}
+
+form-label:first-child {
+    margin-top: 0;
+}
+
+input,
+select {
+    width: 100%;
+    height: 43px;
+    padding: 0 14px;
+    border: 1px solid #cbd3dd;
+    border-radius: 4px;
+    font: inherit;
+}
+
+input {
+    background: white;
+}
+
+select {
+    background: white;
+}
+
+.ghi-chu {
+    margin-top: 8px;
+    color: #c82525;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1,85;
+}
+
+.ghi-chu p {
+    margin: 0;
+}
+
+.nhom-nut {
+    display: flex;
+    gap: 6%;
+    margin-top: 26px;
+}
+
+button {
+    flex: 1;
+    min-height: 48px;
+    padding: 8px;
+    border: 0;
+    border-radius: 24px;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.nut-dang-nhap {
+    background: #559fff;
+}
+
+.nut-quen-mat-khau {
+    background: #3a7ab1;
+}
+
+button:hover {
+    filter: brightless(0,94);
+}
+
+.nhom-nut button::after {
+    content: "»";
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: width 0.25s, opacity 0.25s, transform 0.25s;
+}
+
+.nhom-nut button:hover::after,
+.nhom-nut button:focus-visible::after {
+    width: 1.5em;
+    opacity: 1;
+    transform: translateX(4px);
+}
